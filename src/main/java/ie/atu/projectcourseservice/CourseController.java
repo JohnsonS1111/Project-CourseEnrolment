@@ -1,5 +1,6 @@
 package ie.atu.projectcourseservice;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +18,7 @@ public class CourseController {
     }
 
     @PostMapping("/enrollToCourse")
-    public String enrollToCourse(@RequestBody Course course){
+    public String enrollToCourse(@Valid @RequestBody Course course){
         courseService.enrollToCourse(course);
         return "Successfully enrolled course";
     }
