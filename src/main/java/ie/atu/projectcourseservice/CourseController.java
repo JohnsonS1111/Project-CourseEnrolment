@@ -25,4 +25,10 @@ public class CourseController {
 
     @GetMapping("/courseDetails")
     public @ResponseBody List<Course> getCourse() {return courseService.getCourseDetails(); }
+
+    @PostMapping("/confirmEnroll")
+    public String courseRequest(@RequestBody StudentClass studentClass){
+        return String.format("Received Request for %s %s. This is a valid registration",
+                studentClass.getFirstname(), studentClass.getSurname());
+    }
 }
