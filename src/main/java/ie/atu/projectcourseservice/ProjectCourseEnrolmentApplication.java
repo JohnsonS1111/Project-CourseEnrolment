@@ -1,4 +1,4 @@
-package ie.atu.projectcourseenrolment;
+package ie.atu.projectcourseservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package ie.atu.projectcourseenrolment;
+package ie.atu.projectcourseservice;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
