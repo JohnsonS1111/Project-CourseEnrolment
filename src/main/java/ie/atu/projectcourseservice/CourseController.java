@@ -9,12 +9,10 @@ import java.util.List;
 @RestController
 public class CourseController {
     private CourseService courseService;
-    private CourseConfirmationService courseConfirmationService;
 
     @Autowired
     public void setCourseService(CourseService courseService, CourseConfirmationService courseConfirmationService) {
         this.courseService = courseService;
-        this.courseConfirmationService = courseConfirmationService;
     }
 
     @PostMapping("/enrollToCourse")
@@ -26,7 +24,7 @@ public class CourseController {
     @GetMapping("/courseDetails")
     public @ResponseBody List<Course> getCourse() {return courseService.getCourseDetails(); }
 
-    @PostMapping("/confirmEnroll")
+    @PostMapping("/confirmEnrolment")
     public String courseRequest(@RequestBody StudentClass studentClass){
         return String.format("Received Request for %s %s. This is a valid registration",
                 studentClass.getFirstname(), studentClass.getSurname());
